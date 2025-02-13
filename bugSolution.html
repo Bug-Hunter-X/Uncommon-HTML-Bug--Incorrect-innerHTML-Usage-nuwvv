@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    //Correct way to handle innerHTML assignment using DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('myDiv').innerHTML = "<p>This will work correctly now.</p>";
+    });
+  </script>
+</body>
+</html>
